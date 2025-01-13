@@ -40,7 +40,7 @@ if chosen_item["Available"] == 0 or chosen_item["Available"] <= 0:
    print(f"The \v{chosen_item["Product_name"]} is not available anymore.")
 
 # Step:5 Money procedure.
-amount = float(input("Enter the money here: "))
+amount = float(input("\vEnter the money here: "))
 print(f"\vYour inserted amount is: {amount:,.2f}")
 
 Proceed = input("\vDo you want to proceed?: ")
