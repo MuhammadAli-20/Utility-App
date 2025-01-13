@@ -32,25 +32,25 @@ else:
 # Step:3 Code information.
 code_of_item = int(input("\vEnter the correct code of the item: "))
 if code_of_item in list_of_items:
-        print("Correct code.")
+        print("\vCorrect code.")
 
 # Step:4 Available items in stock.
 chosen_item = list_of_items[code_of_item]
 if chosen_item["Available"] == 0 or chosen_item["Available"] <= 0:
-   print(f"The {chosen_item["Product_name"]} is not available anymore.")
+   print(f"The \v{chosen_item["Product_name"]} is not available anymore.")
 
 # Step:5 Money procedure.
 amount = float(input("Enter the money here: "))
-print(f"Your inserted amount is: {amount:,.2f}")
+print(f"\vYour inserted amount is: {amount:,.2f}")
 
-Proceed = input("Do you want to proceed?: ")
+Proceed = input("\vDo you want to proceed?: ")
 
 if amount < chosen_item["Cost"]: 
-   print("You inserted an incorrect amount.")
+   print("\vYou inserted an incorrect amount.")
    quit()
 
 if Proceed.lower() == "yes":
-   print(f"Alright, The cost of {chosen_item['Product_name']} is {chosen_item['Cost']:,.2f}.")
+   print(f"\vAlright, The cost of {chosen_item['Product_name']} is {chosen_item['Cost']:,.2f}.")
 else:
    exit()
 
@@ -58,11 +58,11 @@ Final_amount = amount - chosen_item["Cost"]
 chosen_item["Available"] -=1
 
 time.sleep(3)
-print(f"Here is your {chosen_item['Product_name']}.")
+print(f"\vHere is your {chosen_item['Product_name']}.")
 
 if Final_amount != 0:
-   print(f"Your final amount is {Final_amount:,.2f}.") # Step:6 Total amount after purchasing.
-   print("\tThankyou for purchasing an item.")
+   print(f"\vYour final amount is {Final_amount:,.2f}.") # Step:6 Total amount after purchasing.
+   print("\v\tThankyou for purchasing an item.")
 
 
 
