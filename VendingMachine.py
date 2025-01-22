@@ -66,9 +66,10 @@ while True:
 
   time.sleep(3) #Using the sleep function with the help of the time module in order to take some time for dispensing.
   print(f"\vHere is your {chosen_item['Product_name']}.")
-
+  
+# Step:6 Total amount after purchasing.
   if Final_amount != 0:
-   print(f"\vYour final amount is {Final_amount:,.2f}.") # Step:6 Total amount after purchasing.
+   print(f"\vYour final amount is {Final_amount:,.2f}.") 
    print("\v\tThankyou for purchasing an item.")
 
 
