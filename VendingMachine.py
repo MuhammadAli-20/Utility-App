@@ -44,8 +44,9 @@ while True:
 
 # Step:5 Money procedure.
    amount = float(input("\vEnter the money here: "))
-   if amount == int or amount == float:
     print(f"\vYour inserted amount is: {amount:,.2f}")
+   if amount == int or amount == float:
+    print()
   except ValueError:
    print("\nSorry, the vending machine can only accept numbers or digits.")
 
@@ -63,7 +64,7 @@ while True:
   Final_amount = amount - chosen_item["Cost"]
   chosen_item["Available"] -=1
 
-  time.sleep(3)
+  time.sleep(3) #Using the sleep function with the help of the time module in order to take some time for dispensing.
   print(f"\vHere is your {chosen_item['Product_name']}.")
 
   if Final_amount != 0:
