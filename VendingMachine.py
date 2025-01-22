@@ -44,7 +44,7 @@ while True:
 
 # Step:5 Money procedure.
    amount = float(input("\vEnter the money here: "))
-    print(f"\vYour inserted amount is: {amount:,.2f}")
+   print(f"\vYour inserted amount is: {amount:,.2f}")
    if amount == int or amount == float:
     print()
   except ValueError:
