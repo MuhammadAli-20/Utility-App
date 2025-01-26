@@ -1,4 +1,4 @@
-# Step:1 Display items information.
+# Step:1 Displaying items information.
 list_of_items = {
 
 111:{"Product_name": "Chocolate", "type": "- Snack", "Cost": 2.00, "Available": 5},
@@ -15,8 +15,8 @@ list_of_items = {
 
                  
                  }
-
-# Step:2 Present the list of items.
+                 
+# Step:2 Presenting the list of items.
 print("\tVending Machine")
 for list, info in list_of_items.items():
     print(f"{list} {info["Product_name"]} {info["type"]}\n ({info["Cost"]:.2f}\n {info["Available"]}") 
@@ -40,7 +40,8 @@ while True:
 # Step:4 Available items in stock.
    chosen_item = list_of_items[code_of_item]
    if chosen_item["Available"] == 0 or chosen_item["Available"] <= 0:
-    print(f"The \v{chosen_item["Product_name"]} is not available anymore.")
+    print(f"\vThe {chosen_item["Product_name"]} is not available anymore. Sorry.")
+    exit()
 
 # Step:5 Money procedure.
    amount = float(input("\vEnter the money here: "))
@@ -54,6 +55,7 @@ while True:
 
   if amount < chosen_item["Cost"]: 
    print("\vYou inserted an incorrect amount.")
+   print(f"\nChange refunded, here is your {amount:,.2f} cents.")
    quit()
 
   if Proceed.lower() == "yes":
@@ -68,10 +70,8 @@ while True:
   print(f"\vHere is your {chosen_item['Product_name']}.")
   
 # Step:6 Total amount after purchasing.
-  if Final_amount != 0:
-   print(f"\vYour final amount is {Final_amount:,.2f}.") 
-   print("\v\tThankyou for purchasing an item.")
-
+  print(f"\vYour final amount is {Final_amount:,.2f}.") 
+  print("\v\tThankyou for purchasing an item.")
 
 
 
